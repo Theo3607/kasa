@@ -1,0 +1,346 @@
+.fiche-logement {
+  color: #ff6060;
+  margin-left: 100px;
+  margin-right: 100px;
+  background: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.fiche-logement .logements-infos1 {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.fiche-logement .logement-first {
+  width: 60%;
+}
+
+.fiche-logement .logement-title {
+  color: #ff6060;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.fiche-logement .logement-title h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.fiche-logement .logement-localisation {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 0;
+}
+
+.fiche-logement .logement-tags {
+  display: flex;
+  gap: 10px;
+}
+
+.fiche-logement .logement-tags span {
+  padding: 5px 30px 5px 30px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #ff6060;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+.fiche-logement .logement-proprietaire {
+  width: 40%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.fiche-logement .owner-informations {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.fiche-logement .owner-informations h3 {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 500;
+  text-align: right;
+  width: 61%;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.fiche-logement .logement-proprietaire-badge {
+  background-color: #c4c4c4;
+  width: 64px;
+  height: 64px;
+  border-radius: 55px;
+}
+
+.fiche-logement .logement-proprietaire-badge img {
+  width: 64px;
+  height: 64px;
+  border-radius: 55px;
+}
+
+.fiche-logement .logements-infos2 {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.fiche-logement .logements-infos2 .logement-description {
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.fiche-logement .logements-infos2 .logement-description .description-chevron {
+  position: relative;
+  top: 1px;
+  display: flex;
+  height: 12px;
+  color: #fff;
+  background-color: #ff6060;
+  padding: 13px 20px 20px 20px;
+  border-radius: 10px;
+  margin-bottom: 0;
+  justify-content: space-between;
+}
+
+.fiche-logement
+  .logements-infos2
+  .logement-description
+  .description-chevron
+  .description-title {
+  margin: 0;
+}
+
+.fiche-logement
+  .logements-infos2
+  .logement-description
+  .description-chevron
+  img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.fiche-logement .logements-infos2 .logement-description .description ul {
+  padding-left: 0;
+}
+
+.fiche-logement .logements-infos2 .logement-description .description ul li {
+  list-style-type: none;
+}
+
+.fiche-logement .logements-infos2 .logement-description .description {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  color: #ff6060;
+  border-radius: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 30px 20px 30px 20px;
+  position: relative;
+  top: -11px;
+  z-index: -1;
+  animation: slide-in 0.5s ease-in-out;
+}
+
+.fiche-logement .logements-infos2 .logement-description .description ul {
+  margin: 0;
+}
+
+.logement-proprietaire-note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.logement-proprietaire-note span {
+  font-size: 38px;
+  color: #e3e3e3;
+}
+
+.logement-proprietaire-note .on {
+  color: #ff6060;
+}
+
+/* Keyframes Dropdown Menus*/
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slide-out {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Responsive */
+
+@media screen and (max-width: 399px) {
+  .fiche-logement {
+    margin-inline: 20px;
+  }
+  .fiche-logement .logement-title {
+    font-size: 18px;
+  }
+  .fiche-logement .logements-infos1 {
+    flex-direction: column;
+  }
+  .fiche-logement .logement-first {
+    width: 100%;
+  }
+  .fiche-logement .logement-tags span {
+    font-size: 10px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+  }
+  .fiche-logement .logement-proprietaire {
+    flex-direction: initial;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .fiche-logement .owner-informations {
+    margin-bottom: 0;
+    justify-content: flex-end;
+  }
+  .fiche-logement .owner-informations h3 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    font-size: 14px;
+  }
+  .logement-proprietaire-note {
+    margin-bottom: 15px;
+  }
+  .fiche-logement .logements-infos2 {
+    flex-direction: column;
+  }
+  .fiche-logement .logements-infos2 .logement-description .description-chevron {
+    padding: 7px 10px 13px 10px;
+  }
+  .logement-proprietaire-note span {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 689px) {
+  .fiche-logement {
+    margin-inline: 20px;
+  }
+  .fiche-logement .logement-title {
+    font-size: 18px;
+  }
+  .fiche-logement .logements-infos1 {
+    flex-direction: column;
+  }
+  .fiche-logement .logement-first {
+    width: 100%;
+  }
+  .fiche-logement .logement-tags span {
+    font-size: 10px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+  }
+  .fiche-logement .logement-proprietaire {
+    flex-direction: initial;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .fiche-logement .owner-informations {
+    margin-bottom: 0;
+    justify-content: flex-end;
+  }
+  .fiche-logement .owner-informations h3 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    width: 50%;
+  }
+  .logement-proprietaire-note {
+    margin-bottom: 15px;
+  }
+  .fiche-logement .logements-infos2 {
+    flex-direction: column;
+  }
+  .fiche-logement .logements-infos2 .logement-description .description-chevron {
+    padding: 7px 10px 13px 10px;
+  }
+  .logement-proprietaire-note span {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 690px) and (max-width: 991px) {
+  .fiche-logement {
+    margin-inline: 20px;
+  }
+  .fiche-logement .logement-title {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .fiche-logement .logements-infos1 {
+    flex-direction: row;
+  }
+  .fiche-logement .logement-first {
+    width: 100%;
+  }
+  .fiche-logement .logement-tags span {
+    font-size: 10px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+  }
+  .fiche-logement .logement-proprietaire {
+    flex-direction: initial;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .fiche-logement .owner-informations {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .fiche-logement .owner-informations h3 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    width: 50%;
+  }
+  .fiche-logement .logements-infos2 {
+    flex-direction: row;
+  }
+  .fiche-logement .logements-infos2 .logement-description .description-chevron {
+    padding: 7px 10px 13px 10px;
+  }
+  .logement-proprietaire-note span {
+    font-size: 30px;
+  }
+  .fiche-logement .logement-localisation {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .fiche-logement .logement-title {
+    font-size: 24px;
+  }
+}

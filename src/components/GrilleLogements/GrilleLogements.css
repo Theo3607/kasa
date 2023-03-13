@@ -1,0 +1,38 @@
+.grid {
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 0 100px 50px 100px;
+  padding: 55px 0 55px 0;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 400px) {
+  .grid {
+    background: none;
+    padding-top: 0;
+    margin-inline: 20px;
+    gap: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 689px) {
+  .grid {
+    background: none;
+    margin-inline: 20px;
+    padding-top: 0;
+    gap: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 690px) and (max-width: 991px) {
+  .grid {
+    margin-inline: 40px;
+  }
+}

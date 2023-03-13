@@ -1,0 +1,190 @@
+.fiche-logement {
+  color: #ff6060;
+  margin: 0 100px 0 100px 0;
+  background: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.fiche-logement .logement-image {
+  margin-bottom: 30px;
+  border-radius: 25px;
+  position: relative;
+  height: 400px;
+}
+
+.fiche-logement .logement-image .image-container img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  max-height: 415px;
+  object-fit: cover;
+  border-radius: 25px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fiche-logement .logement-image .invisible {
+  opacity: 0;
+}
+
+.fiche-logement .logement-image .visible {
+  opacity: 1;
+}
+
+.fiche-logement .logement-image .btn-next {
+  position: absolute;
+  top: 140px;
+  bottom: 0;
+  height: 150px;
+  width: auto;
+  background-color: transparent;
+  border: none;
+  right: 0;
+  cursor: pointer;
+}
+
+.fiche-logement .logement-image .btn-previous {
+  position: absolute;
+  top: 140px;
+  bottom: 0;
+  width: auto;
+  background-color: transparent;
+  border: none;
+  left: 0;
+  height: 150px;
+  cursor: pointer;
+}
+
+.fiche-logement .logement-image .slide-counter {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 399px) {
+  .fiche-logement .logement-image {
+    height: 255px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+  h1.logement-title {
+    line-height: normal;
+  }
+  .fiche-logement .logement-image .image-container img {
+    border-radius: 10px;
+  }
+
+  .fiche-logement .logement-image .image-container .visible {
+    height: 255px;
+  }
+
+  .fiche-logement .logement-image .image-container .invisible {
+    height: 255px;
+  }
+
+  .fiche-logement .logement-image .slide-counter {
+    display: none;
+  }
+
+  .fiche-logement .logement-image .btn-next {
+    top: 50px;
+  }
+  .fiche-logement .logement-image .btn-next img {
+    width: 35px;
+  }
+
+  .fiche-logement .logement-image .btn-previous {
+    top: 50px;
+  }
+  .fiche-logement .logement-image .btn-previous img {
+    width: 35px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 689px) {
+  .fiche-logement .logement-image {
+    height: 255px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+  h1.logement-title {
+    line-height: normal;
+  }
+  .fiche-logement .logement-image .image-container img {
+    border-radius: 10px;
+  }
+
+  .fiche-logement .logement-image .image-container .visible {
+    height: 255px;
+  }
+
+  .fiche-logement .logement-image .image-container .invisible {
+    height: 255px;
+  }
+
+  .fiche-logement .logement-image .slide-counter {
+    display: none;
+  }
+
+  .fiche-logement .logement-image .btn-next {
+    top: 50px;
+  }
+  .fiche-logement .logement-image .btn-next img {
+    width: 35px;
+  }
+
+  .fiche-logement .logement-image .btn-previous {
+    top: 50px;
+  }
+  .fiche-logement .logement-image .btn-previous img {
+    width: 35px;
+  }
+}
+
+@media screen and (min-width: 690px) and (max-width: 991px) {
+  .fiche-logement .logement-image {
+    height: 255px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+  h1.logement-title {
+    line-height: normal;
+  }
+  .fiche-logement .logement-image .image-container img {
+    border-radius: 10px;
+  }
+
+  .fiche-logement .logement-image .image-container .visible {
+    height: 255px;
+  }
+
+  .fiche-logement .logement-image .image-container .invisible {
+    height: 255px;
+  }
+
+  .fiche-logement .logement-image .slide-counter {
+    display: none;
+  }
+
+  .fiche-logement .logement-image .btn-next {
+    top: 50px;
+  }
+  .fiche-logement .logement-image .btn-next img {
+    width: 35px;
+  }
+
+  .fiche-logement .logement-image .btn-previous {
+    top: 50px;
+  }
+  .fiche-logement .logement-image .btn-previous img {
+    width: 35px;
+  }
+}
