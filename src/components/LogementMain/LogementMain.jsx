@@ -1,12 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import "../LogementMain/LogementMain.css";
-import downArrow from "../LogementDescription/arrow_back_ios-24px-closed.png";
-import upArrow from "../LogementDescription/arrow_back_ios-24px.png";
+import LogementDescription from "../../components/LogementDescription/LogementDescription";
 
 export function LogementMain(props) {
   const logement = props.logement;
 
+  // eslint-disable-next-line
   const [isOpen, setIsOpen] = useState(false);
 
   return isOpen ? (
@@ -41,30 +41,18 @@ export function LogementMain(props) {
         </div>
       </div>
       <div className="logements-infos2">
-        <div className="logement-description">
-          <div onClick={() => setIsOpen(false)} className="description-chevron">
-            <p className="description-title">Description</p>
-            <img src={upArrow} alt="Flèche Haut" className="downArrow" />
-          </div>
-          <div className="contentContainer">
-            <p className="description">{logement.description}</p>
-          </div>
-        </div>
-        <div className="logement-description">
-          <div onClick={() => setIsOpen(false)} className="description-chevron">
-            <p className="description-title">Équipements</p>
-            <img src={upArrow} alt="Flèche Haut" className="downArrow" />
-          </div>
-          <div className="contentContainer">
-            <p className="description">
-              <ul>
-                {logement.equipments.map((eq) => (
-                  <li>{eq}</li>
-                ))}
-              </ul>
-            </p>
-          </div>
-        </div>
+        <LogementDescription
+          title="Description"
+          content={logement.description}
+        />
+        <LogementDescription
+          title="Équipements"
+          content=<ul>
+            {logement.equipments.map((eq) => (
+              <li>{eq}</li>
+            ))}
+          </ul>
+        />
       </div>
     </>
   ) : (
@@ -99,30 +87,18 @@ export function LogementMain(props) {
         </div>
       </div>
       <div className="logements-infos2">
-        <div className="logement-description">
-          <div onClick={() => setIsOpen(true)} className="description-chevron">
-            <p className="description-title">Description</p>
-            <img src={downArrow} alt="Flèche Bas" className="downArrow" />
-            <div className="contentContainer">
-              <p className="description">{logement.description}</p>
-            </div>
-          </div>
-        </div>
-        <div className="logement-description">
-          <div onClick={() => setIsOpen(true)} className="description-chevron">
-            <p className="description-title">Équipements</p>
-            <img src={downArrow} alt="Flèche Bas" className="downArrow" />
-            <div className="contentContainer">
-              <p className="description">
-                <ul>
-                  {logement.equipments.map((eq) => (
-                    <li>{eq}</li>
-                  ))}
-                </ul>
-              </p>
-            </div>
-          </div>
-        </div>
+        <LogementDescription
+          title="Description"
+          content={logement.description}
+        />
+        <LogementDescription
+          title="Équipements"
+          content=<ul>
+            {logement.equipments.map((eq) => (
+              <li>{eq}</li>
+            ))}
+          </ul>
+        />
       </div>
     </>
   );
